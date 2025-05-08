@@ -1,0 +1,111 @@
+/* Main blog post container */
+.blog-post {
+    position: relative;
+    z-index: 1;
+    padding: 2rem 1rem;
+    background: #fff;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Content container */
+  .post-container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  /* Header section - shadow removed */
+  .post-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    box-shadow: none;
+    width: 100%;
+  }
+  
+  /* Content area */
+  .post-content {
+    line-height: 1.7;
+    color: #333;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 720px; /* Slightly less than container for better readability */
+    margin: 0 auto;
+  }
+  
+  /* Paragraph styling */
+  .post-content p {
+    margin-bottom: 1.5rem;
+    text-align: left; /* Left align text but centered in container */
+  }
+  
+  /* Images */
+  .post-featured-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5rem auto;
+    display: block;
+  }
+  
+  /* Title styling */
+  .post-title {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Meta info */
+  .post-meta {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .blog-post {
+      padding: 1.5rem 0.5rem;
+      margin-top: 1rem;
+    }
+    
+    .post-container {
+      padding: 1.5rem;
+      width: calc(100% - 2rem);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    
+    .post-title {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .blog-post {
+      padding: 1rem 0.25rem;
+    margin-top: 0.5rem;
+    }
+    
+    .post-container {
+      padding: 1rem;
+      width: calc(100% - 1rem);
+      box-shadow: none;
+      border: 1px solid #f0f0f0;
+    }
+    
+    .post-title {
+      font-size: 1.8rem;
+    }
+    
+    .post-content {
+      max-width: 100%;
+    }
+  }

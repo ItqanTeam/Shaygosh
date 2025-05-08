@@ -92,7 +92,7 @@ nav ul li a {
     position: relative;
 }
 
-nav ul li a:after {
+nav ul li a.active:after {
     content: '';
     position: absolute;
     width: 0;
@@ -103,10 +103,10 @@ nav ul li a:after {
     transition: var(--transition);
 }
 
-nav ul li a:hover:after,
+/* nav ul li a:hover:after,
 nav ul li a.active:after {
     width: 100%;
-}
+} */
 
 nav ul li a:hover {
     color: var(--primary-color);

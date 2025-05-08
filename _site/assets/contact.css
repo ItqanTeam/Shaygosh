@@ -1,0 +1,250 @@
+/* Base Variables */
+:root {
+    --primary-color: #2E8B57;
+    --primary-dark: #1E5A3F;
+    --secondary-color: #1E5A8A;
+    --accent-color: #F0E68C;
+    --light-color: #FFFFFF;
+    --light-gray: #F9F9F9;
+    --medium-gray: #E0E0E0;
+    --dark-color: #333333;
+    --success-color: #28A745;
+    --warning-color: #FFC107;
+    --danger-color: #DC3545;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-gray);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+a:hover {
+    color: var(--primary-dark);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo img {
+    height: 50px;
+}
+.logo-text h1 {
+    font-size: 1.5rem;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+nav a {
+    color: var(--light-color);
+    font-weight: bold;
+}
+nav a.active,
+nav a:hover {
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+    background-size: cover;
+    background-position: center;
+    color: var(--light-color);
+    padding: 4rem 1rem;
+    text-align: center;
+}
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Section */
+.section {
+    padding: 3rem 0;
+}
+.section-light {
+    background-color: var(--light-color);
+}
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+.grid-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Card */
+.card {
+    background-color: var(--light-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+}
+.card-body p {
+    margin-bottom: 1rem;
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 1rem;
+}
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--medium-gray);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1rem;
+}
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Table */
+.table-container {
+    overflow-x: auto;
+}
+.enhanced-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.enhanced-table th,
+.enhanced-table td {
+    padding: 0.75rem;
+    border: 1px solid var(--medium-gray);
+    text-align: left;
+}
+
+/* Image Card */
+.image-card {
+    position: relative;
+}
+.image-card img {
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+.caption {
+    padding: 1rem 0;
+}
+
+/* Map */
+.map-container iframe {
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-dark);
+    color: var(--light-color);
+    padding: 2rem 1rem;
+}
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.footer-column h3 {
+    margin-bottom: 1rem;
+}
+.footer-column ul {
+    list-style: none;
+}
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+.social-links a {
+    color: var(--light-color);
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+.social-links a:hover {
+    color: var(--accent-color);
+}
+footer .mt-4 {
+    margin-top: 1rem;
+}
+footer .copyright {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    .header-container,
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

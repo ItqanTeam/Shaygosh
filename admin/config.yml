@@ -1,0 +1,28 @@
+backend:
+  name: github
+  repo: ItqanTeam/Shaygosh
+  branch: main
+
+media_folder: "src/assets/images"
+public_folder: "/images"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    # Add these 3 critical lines:
+    meta: 
+      layout: "post.njk"
+      css: "blog-post.css"
+    fields:
+      # Hidden fields to enforce templates/styles:
+      - { name: "layout", widget: "hidden", default: "post.njk" }
+      - { name: "css", widget: "hidden", default: "blog-post.css" }
+      # Your existing fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Excerpt", name: "excerpt", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }

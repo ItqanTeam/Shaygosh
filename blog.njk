@@ -1,0 +1,34 @@
+---
+layout: base.njk
+title: Blog
+css: blog.css  
+---
+
+<section class="blog-listing">
+  <div class="container">
+    <h1 class="blog-title">Our Blog</h1>
+    
+    <div class="blog-grid">
+      {% for post in collections.blog | reverse %}
+        <article class="blog-card">
+          <a href="{{ post.url }}" class="blog-card-link">
+            {% if post.data.image %}
+              <div class="blog-card-image">
+                <img src="{{ post.data.image }}" alt="{{ post.data.title }}">
+              </div>
+            {% endif %}
+            
+            <div class="blog-card-content">
+              <h2>{{ post.data.title }}</h2>
+              <time class="blog-date">{{ post.date | postDate }}</time>
+              {% if post.data.excerpt %}
+                <p class="blog-excerpt">{{ post.data.excerpt }}</p>
+              {% endif %}
+              <span class="read-more">Read More →</span>
+            </div>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
