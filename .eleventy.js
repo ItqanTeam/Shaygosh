@@ -2,7 +2,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("assets");
 
     eleventyConfig.addCollection("blog", function(collectionApi) {
-      return collectionApi.getFilteredByGlob("src/blog/*.md");
+      return collectionApi.getFilteredByGlob("blog/*.md");
     });
   
     eleventyConfig.addFilter("postDate", (dateObj) => {
@@ -13,7 +13,7 @@ module.exports = function(eleventyConfig) {
       });
     });
 
-  eleventyConfig.addPassthroughCopy("src/admin");
+  eleventyConfig.addPassthroughCopy("admin");
 
   
     return {
