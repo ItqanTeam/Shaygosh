@@ -3,13 +3,13 @@ backend:
   repo: ItqanTeam/Shaygosh
   branch: main
 
-media_folder: "/assets/images"
+media_folder: "assets/images"
 public_folder: "/images"
 
 collections:
   - name: "blog"
     label: "Blog Posts"
-    folder: "src/blog"
+    folder: "blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     # Add these 3 critical lines:
