@@ -3,40 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Home</title>
   <link rel="stylesheet" href="/assets/styles.css" />
     
   
 </head>
 <body>
-  <header>  <div class="container header-container">
+   <header>
+        <div class="container header-container">
             <a href="index.html" class="logo">
-                <!-- Sample logo from Placeholder.com -->
-                <img src="https://via.placeholder.com/150x60?text=SBS+Logo" alt="School Logo">
                 <div class="logo-text">
                     <h1>Shaykosh Boarding School</h1>
                     <p>For Pastoralist Children</p>
                 </div>
             </a>
-            <nav>
+            <div class="menu-toggle" id="mobile-menu">☰</div>
+            <nav id="main-nav">
                 <ul>
                     <li><a href="/index/" class="active">Home</a></li>
                     <li><a href="/about/">About</a></li>
                     <li><a href="/academics/">Academics</a></li>
                     <li><a href="/support/">Support</a></li>
                     <li><a href="/contact/">Contact</a></li>
-                    <li><a href="/blog/">blog</a></li>
-
+                    <li><a href="/blog/">Blog</a></li>
                 </ul>
             </nav>
         </div>
-        </header>
+    </header>
 
 
   <main>
     
     <!-- Hero image from Unsplash (education theme) -->
-    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+    <section class="hero" style="background-image: url('./assets/images/WhatsApp\ Image\ 2025-05-09\ at\ 14.23.59_96fd5b8d.jpg');">
         <div class="hero-content">
             <h2>Empowering Pastoralist Children Through Quality Education</h2>
             <p>The first boarding institution established specifically for pastoralist children in the Somali Regional State</p>
@@ -82,7 +82,7 @@
                 </div>
                 <div class="image-card">
                     <!-- Classroom image from Unsplash -->
-                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Students in Classroom">
+                    <img src="./assets/images/quality.jpg" alt="Students in Classroom">
                     <div class="caption">
                         <h3>Quality Education for All</h3>
                         <p>Providing equal opportunities for pastoralist children</p>
@@ -98,7 +98,7 @@
             <div class="grid grid-3">
                 <div class="card">
                     <!-- Islamic studies image from Unsplash -->
-                    <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Islamic Studies" class="card-img">
+                    <img src="/assets/images/dugsi.png" alt="Islamic Studies" class="card-img">
                     <div class="card-body">
                         <h3 class="card-title">Islamic Education</h3>
                         <p>Daily Qur'an memorization and Islamic moral education integrated with formal academics.</p>
@@ -107,7 +107,7 @@
                 </div>
                 <div class="card">
                     <!-- Classroom image from Unsplash -->
-                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Formal Education" class="card-img">
+                    <img src="/assets/images/aboutBack.jpg" alt="Formal Education" class="card-img">
                     <div class="card-body">
                         <h3 class="card-title">Formal Education</h3>
                         <p>National standard curriculum with qualified teachers and modern teaching methods.</p>
@@ -116,7 +116,7 @@
                 </div>
                 <div class="card">
                     <!-- Dormitory image from Unsplash -->
-                    <img src="https://images.unsplash.com/photo-1580216643062-cf460548a66a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Boarding Program" class="card-img">
+                    <img src="/assets/images/teacher.png" alt="Boarding Program" class="card-img">
                     <div class="card-body">
                         <h3 class="card-title">Boarding Program</h3>
                         <p>Full residential services including accommodation, meals, and spiritual guidance.</p>
@@ -170,7 +170,27 @@
         </div>
     </section>
 
-  
+   <script>
+        // Toggle menu functionality
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            const nav = document.getElementById('main-nav');
+            nav.classList.toggle('active');
+            
+            // Change the icon between ☰ and ✕
+            this.textContent = nav.classList.contains('active') ? '✕' : '☰';
+        });
+        
+        // Close menu when a nav link is clicked (optional)
+        const navLinks = document.querySelectorAll('#main-nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    document.getElementById('main-nav').classList.remove('active');
+                    document.getElementById('mobile-menu').textContent = '☰';
+                }
+            });
+        });
+    </script>
   </main>
 
 
@@ -188,7 +208,7 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-column">
+                <div class="footer-column address">
                     <h3>Contact Info</h3>
                     <ul>
                         <li>Shaykosh District, Korahay Zone</li>
@@ -200,10 +220,10 @@
                 <div class="footer-column">
                     <h3>Follow Us</h3>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fa fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
                     </div>
                     <h3 class="mt-4">Diaspora Contact</h3>
                     <p>diaspora@shaykoshschool.edu</p>
@@ -215,5 +235,6 @@
         </div>
         
         </footer>
+        
 </body>
 </html>

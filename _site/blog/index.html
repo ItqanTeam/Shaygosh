@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Blog</title>
   <link rel="stylesheet" href="/assets/styles.css" />
     
@@ -11,28 +12,27 @@
   
 </head>
 <body>
-  <header>  <div class="container header-container">
+   <header>
+        <div class="container header-container">
             <a href="index.html" class="logo">
-                <!-- Sample logo from Placeholder.com -->
-                <img src="https://via.placeholder.com/150x60?text=SBS+Logo" alt="School Logo">
                 <div class="logo-text">
                     <h1>Shaykosh Boarding School</h1>
                     <p>For Pastoralist Children</p>
                 </div>
             </a>
-            <nav>
+            <div class="menu-toggle" id="mobile-menu">☰</div>
+            <nav id="main-nav">
                 <ul>
                     <li><a href="/index/" class="active">Home</a></li>
                     <li><a href="/about/">About</a></li>
                     <li><a href="/academics/">Academics</a></li>
                     <li><a href="/support/">Support</a></li>
                     <li><a href="/contact/">Contact</a></li>
-                    <li><a href="/blog/">blog</a></li>
-
+                    <li><a href="/blog/">Blog</a></li>
                 </ul>
             </nav>
         </div>
-        </header>
+    </header>
 
 
   <main>
@@ -42,6 +42,23 @@
     <h1 class="blog-title">Our Blog</h1>
     
     <div class="blog-grid">
+      
+        <article class="blog-card">
+          <a href="/blog/2025-05-08-test-blog-bost/" class="blog-card-link">
+            
+              <div class="blog-card-image">
+                <img src="/assets/images/WhatsApp Image .jpeg" alt="test blog bost">
+              </div>
+            
+            
+            <div class="blog-card-content">
+              <h2>test blog bost</h2>
+              <time class="blog-date">May 8, 2025</time>
+              
+              <span class="read-more">Read More →</span>
+            </div>
+          </a>
+        </article>
       
         <article class="blog-card">
           <a href="/blog/2025-05-08-disaster-management/" class="blog-card-link">
@@ -60,9 +77,83 @@
           </a>
         </article>
       
+        <article class="blog-card">
+          <a href="/blog/2025-05-08-disaster-management-3/" class="blog-card-link">
+            
+              <div class="blog-card-image">
+                <img src="/images/WhatsApp Image .jpeg" alt="DISASTER MANAGEMENT">
+              </div>
+            
+            
+            <div class="blog-card-content">
+              <h2>DISASTER MANAGEMENT</h2>
+              <time class="blog-date">May 8, 2025</time>
+              
+              <span class="read-more">Read More →</span>
+            </div>
+          </a>
+        </article>
+      
+        <article class="blog-card">
+          <a href="/blog/2025-05-08-disaster-management-2/" class="blog-card-link">
+            
+              <div class="blog-card-image">
+                <img src="/images/WhatsApp Image .jpeg" alt="DISASTER MANAGEMENT">
+              </div>
+            
+            
+            <div class="blog-card-content">
+              <h2>DISASTER MANAGEMENT</h2>
+              <time class="blog-date">May 8, 2025</time>
+              
+              <span class="read-more">Read More →</span>
+            </div>
+          </a>
+        </article>
+      
+        <article class="blog-card">
+          <a href="/blog/2025-05-08-disaster-management-1/" class="blog-card-link">
+            
+              <div class="blog-card-image">
+                <img src="/images/WhatsApp Image .jpeg" alt="DISASTER MANAGEMENT">
+              </div>
+            
+            
+            <div class="blog-card-content">
+              <h2>DISASTER MANAGEMENT</h2>
+              <time class="blog-date">May 8, 2025</time>
+              
+              <span class="read-more">Read More →</span>
+            </div>
+          </a>
+        </article>
+      
     </div>
   </div>
 </section>
+
+
+   <script>
+        // Toggle menu functionality
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            const nav = document.getElementById('main-nav');
+            nav.classList.toggle('active');
+            
+            // Change the icon between ☰ and ✕
+            this.textContent = nav.classList.contains('active') ? '✕' : '☰';
+        });
+        
+        // Close menu when a nav link is clicked (optional)
+        const navLinks = document.querySelectorAll('#main-nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    document.getElementById('main-nav').classList.remove('active');
+                    document.getElementById('mobile-menu').textContent = '☰';
+                }
+            });
+        });
+    </script>
   </main>
 
 
@@ -80,7 +171,7 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-column">
+                <div class="footer-column address">
                     <h3>Contact Info</h3>
                     <ul>
                         <li>Shaykosh District, Korahay Zone</li>
@@ -92,10 +183,10 @@
                 <div class="footer-column">
                     <h3>Follow Us</h3>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fa fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
                     </div>
                     <h3 class="mt-4">Diaspora Contact</h3>
                     <p>diaspora@shaykoshschool.edu</p>
@@ -107,5 +198,6 @@
         </div>
         
         </footer>
+        
 </body>
 </html>

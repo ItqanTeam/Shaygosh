@@ -4,7 +4,7 @@ title: Home
 ---
 
     <!-- Hero image from Unsplash (education theme) -->
-    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+    <section class="hero" style="background-image: url('./assets/images/WhatsApp\ Image\ 2025-05-09\ at\ 14.23.59_96fd5b8d.jpg');">
         <div class="hero-content">
             <h2>Empowering Pastoralist Children Through Quality Education</h2>
             <p>The first boarding institution established specifically for pastoralist children in the Somali Regional State</p>
@@ -50,7 +50,7 @@ title: Home
                 </div>
                 <div class="image-card">
                     <!-- Classroom image from Unsplash -->
-                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Students in Classroom">
+                    <img src="./assets/images/quality.jpg" alt="Students in Classroom">
                     <div class="caption">
                         <h3>Quality Education for All</h3>
                         <p>Providing equal opportunities for pastoralist children</p>
@@ -66,7 +66,7 @@ title: Home
             <div class="grid grid-3">
                 <div class="card">
                     <!-- Islamic studies image from Unsplash -->
-                    <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Islamic Studies" class="card-img">
+                    <img src="/assets/images/dugsi.png" alt="Islamic Studies" class="card-img">
                     <div class="card-body">
                         <h3 class="card-title">Islamic Education</h3>
                         <p>Daily Qur'an memorization and Islamic moral education integrated with formal academics.</p>
@@ -75,7 +75,7 @@ title: Home
                 </div>
                 <div class="card">
                     <!-- Classroom image from Unsplash -->
-                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Formal Education" class="card-img">
+                    <img src="/assets/images/aboutBack.jpg" alt="Formal Education" class="card-img">
                     <div class="card-body">
                         <h3 class="card-title">Formal Education</h3>
                         <p>National standard curriculum with qualified teachers and modern teaching methods.</p>
@@ -84,7 +84,7 @@ title: Home
                 </div>
                 <div class="card">
                     <!-- Dormitory image from Unsplash -->
-                    <img src="https://images.unsplash.com/photo-1580216643062-cf460548a66a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Boarding Program" class="card-img">
+                    <img src="/assets/images/teacher.png" alt="Boarding Program" class="card-img">
                     <div class="card-body">
                         <h3 class="card-title">Boarding Program</h3>
                         <p>Full residential services including accommodation, meals, and spiritual guidance.</p>
@@ -138,4 +138,24 @@ title: Home
         </div>
     </section>
 
-  
+   <script>
+        // Toggle menu functionality
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            const nav = document.getElementById('main-nav');
+            nav.classList.toggle('active');
+            
+            // Change the icon between ☰ and ✕
+            this.textContent = nav.classList.contains('active') ? '✕' : '☰';
+        });
+        
+        // Close menu when a nav link is clicked (optional)
+        const navLinks = document.querySelectorAll('#main-nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    document.getElementById('main-nav').classList.remove('active');
+                    document.getElementById('mobile-menu').textContent = '☰';
+                }
+            });
+        });
+    </script>

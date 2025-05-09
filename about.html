@@ -4,7 +4,7 @@ title: about
 ---
 
     <!-- Hero image from Unsplash (about theme) -->
-    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+    <section class="hero" style="background-image: url('/assets/images/aboutBack.jpg');">
         <div class="hero-content">
             <h2>Our Story and Mission</h2>
             <p>Transforming lives through education since 2007</p>
@@ -187,7 +187,7 @@ title: about
             <div class="grid grid-2">
                 <div class="image-card">
                     <!-- Girls classroom image from Unsplash -->
-                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Female Students">
+                    <img src="/assets/images/female.png" alt="Female Students">
                     <div class="caption">
                         <h3>Increasing Female Enrollment</h3>
                         <p>From 0 girls in 2000 to 62 in 2017 - progress continues</p>
@@ -203,3 +203,26 @@ title: about
             </div>
         </div>
     </section>
+
+    
+   <script>
+        // Toggle menu functionality
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            const nav = document.getElementById('main-nav');
+            nav.classList.toggle('active');
+            
+            // Change the icon between ☰ and ✕
+            this.textContent = nav.classList.contains('active') ? '✕' : '☰';
+        });
+        
+        // Close menu when a nav link is clicked (optional)
+        const navLinks = document.querySelectorAll('#main-nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    document.getElementById('main-nav').classList.remove('active');
+                    document.getElementById('mobile-menu').textContent = '☰';
+                }
+            });
+        });
+    </script>
