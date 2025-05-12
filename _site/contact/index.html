@@ -110,7 +110,7 @@
                     <h2 class="section-title">Send Us a Message</h2>
                     <div class="card">
                         <div class="card-body">
-                            <form>
+                            <form id="contact-form">
                                 <div class="form-group">
                                     <label for="name">Full Name</label>
                                     <input type="text" id="name" name="name" class="form-control" required>
@@ -183,6 +183,29 @@
             });
         });
     </script>
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    emailjs.init('lFiQINtDZiyVEKZO_'); // 🔁 Replace with your EmailJS Public Key
+
+    const form = document.getElementById('contact-form');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      emailjs.sendForm(
+          'service_to26jzn',   // 🔁 Replace with your Service ID 
+          'template_mhscgco',  // 🔁 Replace with your Template ID
+        this
+      ).then(function(response) {
+        alert('✅ Message sent successfully!');
+        form.reset();
+      }, function(error) {
+        alert('❌ Message failed. Please try again.');
+        console.error('EmailJS error:', error);
+      });
+    });
+  </script>
+
   </main>
 
 
