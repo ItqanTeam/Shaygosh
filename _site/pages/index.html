@@ -1,8 +1,44 @@
----
-layout: base.njk
-title: Home
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Home</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+    
+  
+</head>
+<body>
+   <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-text">
+                    <h1>Shaykosh Boarding School</h1>
+                    <p>For Pastoralist Children</p>
+                </div>
+            </a>
+            <div class="menu-toggle" id="mobile-menu">☰</div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="/index/" class="active">Home</a></li>
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="/academics/">Academics</a></li>
+                    <li><a href="/support/">Support</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+
+  <main>
+    
 <!-- Hero image from Unsplash (education theme) -->
 <section class="hero"
     style="background-image: url('./assets/images/WhatsApp\ Image\ 2025-05-09\ at\ 14.23.59_96fd5b8d.jpg');">
@@ -11,8 +47,8 @@ title: Home
         <p>The first boarding institution established specifically for pastoralist children in the Somali Regional State
         </p>
         <div class="cta-buttons">
-            <a href="/about/" class="btn btn-primary">Learn More</a>
-            <a href="/support/" class="btn btn-outline">Support Us</a>
+            <a href="about.html" class="btn btn-primary">Learn More</a>
+            <a href="support.html" class="btn btn-outline">Support Us</a>
         </div>
     </div>
 </section>
@@ -50,7 +86,7 @@ title: Home
                     for pastoralist children in the Somali Regional State.</p>
                 <p>Our mission is to provide quality residential education grounded in Islamic teachings, academic
                     knowledge, and comprehensive care that prepares students to contribute to their communities.</p>
-                <a href="/about/" class="btn btn-primary mt-3">Read Our Story</a>
+                <a href="about.html" class="btn btn-primary mt-3">Read Our Story</a>
             </div>
             <div class="image-card">
                 <!-- Classroom image from Unsplash -->
@@ -74,7 +110,7 @@ title: Home
                 <div class="card-body">
                     <h3 class="card-title">Islamic Education</h3>
                     <p>Daily Qur'an memorization and Islamic moral education integrated with formal academics.</p>
-                    <a href="/academics/" class="btn btn-secondary mt-2">Learn More</a>
+                    <a href="academics.html" class="btn btn-secondary mt-2">Learn More</a>
                 </div>
             </div>
             <div class="card">
@@ -83,7 +119,7 @@ title: Home
                 <div class="card-body">
                     <h3 class="card-title">Formal Education</h3>
                     <p>National standard curriculum with qualified teachers and modern teaching methods.</p>
-                    <a href="/academics/" class="btn btn-secondary mt-2">Learn More</a>
+                    <a href="academics.html" class="btn btn-secondary mt-2">Learn More</a>
                 </div>
             </div>
             <div class="card">
@@ -92,7 +128,7 @@ title: Home
                 <div class="card-body">
                     <h3 class="card-title">Boarding Program</h3>
                     <p>Full residential services including accommodation, meals, and spiritual guidance.</p>
-                    <a href="/academics/" class="btn btn-secondary mt-2">Learn More</a>
+                    <a href="academics.html" class="btn btn-secondary mt-2">Learn More</a>
                 </div>
             </div>
         </div>
@@ -110,7 +146,7 @@ title: Home
                 <div class="card-body">
                     <h3 class="card-title">Science Labs</h3>
                     <p>We urgently need chemistry, biology, and physics laboratory equipment.</p>
-                    <a href="/support/" class="btn btn-primary mt-2">Help Us</a>
+                    <a href="support.html" class="btn btn-primary mt-2">Help Us</a>
                 </div>
             </div>
             <div class="card">
@@ -120,7 +156,7 @@ title: Home
                 <div class="card-body">
                     <h3 class="card-title">School Library</h3>
                     <p>A dedicated space for research and reading is critically needed.</p>
-                    <a href="/support/" class="btn btn-primary mt-2">Help Us</a>
+                    <a href="support.html" class="btn btn-primary mt-2">Help Us</a>
                 </div>
             </div>
             <div class="card">
@@ -130,7 +166,7 @@ title: Home
                 <div class="card-body">
                     <h3 class="card-title">ICT Equipment</h3>
                     <p>Computers and technology tools to prepare students for the digital age.</p>
-                    <a href="/support/" class="btn btn-primary mt-2">Help Us</a>
+                    <a href="support.html" class="btn btn-primary mt-2">Help Us</a>
                 </div>
             </div>
         </div>
@@ -155,7 +191,7 @@ title: Home
     <div class="container text-center">
         <h2 class="section-title">Join Us in Making a Difference</h2>
         <p class="mb-4">Your support can transform the lives of pastoralist children through education.</p>
-        <a href="/support/" class="btn btn-primary">Support Our Mission</a>
+        <a href="support.html" class="btn btn-primary">Support Our Mission</a>
     </div>
 </section>
 
@@ -200,3 +236,52 @@ title: Home
     },
   });
 </script>
+
+  </main>
+
+
+  <footer>  
+  
+     <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/index/">Home</a></li>
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="/academics/">Academics</a></li>
+                    <li><a href="/support/">Support</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column address">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>Shaykosh District, Korahay Zone</li>
+                        <li>Somali Regional State, Ethiopia</li>
+                        <li>Email: info@shaykoshschool.edu</li>
+                        <li>Phone: +251 XXX XXX XXX</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <h3 class="mt-4">Diaspora Contact</h3>
+                    <p>diaspora@shaykoshschool.edu</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Shaykosh Boarding School for Pastoralists. All Rights Reserved.</p>
+            </div>
+        </div>
+        
+        </footer>
+        
+</body>
+</html>
