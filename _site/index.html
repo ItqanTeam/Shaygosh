@@ -201,25 +201,46 @@
 </section>
 
 <script>
+ document.addEventListener('DOMContentLoaded', function() {
+    // Get elements - using classes instead of IDs for better practice
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    const navLinks = document.querySelectorAll('nav a');
+    
     // Toggle menu functionality
-    document.getElementById('mobile-menu').addEventListener('click', function () {
-        const nav = document.getElementById('main-nav');
-        nav.classList.toggle('active');
-
-        // Change the icon between ☰ and ✕
-        this.textContent = nav.classList.contains('active') ? '✕' : '☰';
-    });
-
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            nav.classList.toggle('active');
+            
+            // Change the icon between ☰ and ✕
+            this.textContent = nav.classList.contains('active') ? '✕' : '☰';
+        });
+    }
+    
     // Close menu when a nav link is clicked (optional)
-    const navLinks = document.querySelectorAll('#main-nav a');
     navLinks.forEach(link => {
-        link.addEventListener('click', function () {
+        link.addEventListener('click', function() {
             if (window.innerWidth <= 768) {
-                document.getElementById('main-nav').classList.remove('active');
-                document.getElementById('mobile-menu').textContent = '☰';
+                nav.classList.remove('active');
+                if (menuToggle) {
+                    menuToggle.textContent = '☰';
+                }
             }
         });
     });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (window.innerWidth <= 768 && nav.classList.contains('active')) {
+            if (!event.target.closest('nav') && !event.target.closest('.menu-toggle')) {
+                nav.classList.remove('active');
+                if (menuToggle) {
+                    menuToggle.textContent = '☰';
+                }
+            }
+        }
+    });
+});
 </script>
 
 <!-- Swiper JS (at the end of <body>) -->

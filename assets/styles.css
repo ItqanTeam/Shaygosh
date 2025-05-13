@@ -42,53 +42,41 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    height: 20vh;
+    height: auto;
+    min-height: 80px;
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
+    align-items: center;
     padding: 1rem 0;
-}
-.header-container > * {
-    margin-top: 2%;
+    position: relative;
 }
 
 .logo {
     display: flex;
     align-items: center;
     text-decoration: none;
-    width: 10%;
-    height: 80px;
-    padding: 10px;
-
+    width: 150px;
+    height: 60px;
+    padding: 5px;
 }
 
 .logo img {
-    margin-right: 1rem;
     width: 100%;
-    object-fit:cover;
-
+    height: 100%;
+    object-fit: contain;
 }
-.logo-text{
-    width: 100%;
-    /* height: 20px; */
-    margin-bottom: 40%;
-
-}
-
-.logo-text img {
-    height: 110px;
-    width: 100%;
-
-}
-
 
 .menu-toggle {
     display: none;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: var(--dark-color);
+    padding: 0.5rem;
 }
 
 nav ul {
@@ -113,9 +101,6 @@ nav ul li a {
 nav ul li:hover {
     border-bottom: 3px solid var(--primary-color);
 }
-
-
-
 
 nav ul li a:hover {
     color: var(--primary-color);
@@ -251,14 +236,14 @@ nav ul li a:hover {
 }
 
 /* Card Styles */
-/* .card {
+.card {
     background-color: var(--light-color);
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--box-shadow);
     transition: var(--transition);
     height: 100%;
-} */
+}
 
 .card:hover {
     transform: translateY(-5px);
@@ -535,38 +520,34 @@ footer {
 }
 
 .swiper {
-  width: 100%;
-  max-width: 800px;
-  max-height: 500px;
-  aspect-ratio: 16/9;
-  margin: 0 auto 2rem; /* center the swiper */
-  overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    max-height: 500px;
+    aspect-ratio: 16/9;
+    margin: 0 auto 2rem;
+    overflow: hidden;
 }
 
 .swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f4;
 }
 
 .swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-  aspect-ratio: 16 / 9;
-  
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    aspect-ratio: 16 / 9;
 }
 
-.swiper-button-prev, .swiper-button-next{
+.swiper-button-prev, .swiper-button-next {
     background-color: rgba(16, 16, 16, 0.21);
     padding: 27px;
     border-radius: 50%;
 }
-
-
-
 
 /* Responsive Design */
 @media (max-width: 992px) {
@@ -577,45 +558,59 @@ footer {
 
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: column;
-        text-align: center;
+        padding: 0 1rem;
     }
 
-           .menu-toggle {
-                display: block;
-            }
-            
-            nav {
-                width: 100%;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.3s ease-out;
-            }
-            
-            nav.active {
-                max-height: 500px; /* Adjust based on your menu height */
-            }
-            
-            nav ul {
-                flex-direction: column;
-                padding: 1rem 0;
-            }
-            
-            nav ul li a {
-                padding: 0.8rem 1rem;
-                /* border-bottom: 1px solid #444; */
-            }
+    .logo {
+        margin-top: 2%;
+        width: 70px;
+        height: 70px;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1001;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--light-color);
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+
+    nav.active {
+        max-height: 100vh;
+    }
 
     nav ul {
-        margin-top: 1.5rem;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        padding: 1rem;
+        margin: 0;
     }
 
     nav ul li {
-        margin: 0.5rem;
-        /* border-bottom: 2px solid ; */
-        
+        margin: 0;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--medium-gray);
+    }
+
+    nav ul li:hover {
+        border-bottom: 1px solid var(--medium-gray);
+    }
+
+    nav ul li a {
+        padding: 0.8rem 1rem;
+        display: block;
     }
 
     .hero {
