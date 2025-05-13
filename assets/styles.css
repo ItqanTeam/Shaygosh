@@ -536,9 +536,11 @@ footer {
 
 .swiper {
   width: 100%;
-  max-width: 1000px;
-  height: 400px;
+  max-width: 800px;
+  max-height: 500px;
+  aspect-ratio: 16/9;
   margin: 0 auto 2rem; /* center the swiper */
+  overflow: hidden;
 }
 
 .swiper-slide {
@@ -551,15 +553,19 @@ footer {
 .swiper-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* or 'contain' if you want full image visible */
+  object-fit: cover;
   border-radius: 10px;
+  aspect-ratio: 16 / 9;
+  
 }
 
 .swiper-button-prev, .swiper-button-next{
-    background-color: rgba(117, 119, 205, 0.811);
-    padding: 21px;
-    border-radius: 5px;
+    background-color: rgba(16, 16, 16, 0.21);
+    padding: 27px;
+    border-radius: 50%;
 }
+
+
 
 
 /* Responsive Design */
