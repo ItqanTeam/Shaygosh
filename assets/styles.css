@@ -42,36 +42,48 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    height: 20vh;
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     padding: 1rem 0;
+}
+.header-container > * {
+    margin-top: 2%;
 }
 
 .logo {
     display: flex;
     align-items: center;
     text-decoration: none;
+    width: 10%;
+    height: 80px;
+    padding: 10px;
+
 }
 
 .logo img {
-    height: 60px;
     margin-right: 1rem;
+    width: 100%;
+    object-fit:cover;
+
+}
+.logo-text{
+    width: 100%;
+    /* height: 20px; */
+    margin-bottom: 40%;
+
 }
 
-.logo-text h1 {
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    margin-bottom: 0.2rem;
+.logo-text img {
+    height: 110px;
+    width: 100%;
+
 }
 
-.logo-text p {
-    color: var(--secondary-color);
-    font-size: 0.9rem;
-}
 
 .menu-toggle {
     display: none;
