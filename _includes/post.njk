@@ -19,3 +19,24 @@ css: blog-post.css
     </div>
   </div>
 </article>
+<script>
+        // Toggle menu functionality
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            const nav = document.getElementById('main-nav');
+            nav.classList.toggle('active');
+            
+            // Change the icon between ☰ and ✕
+            this.textContent = nav.classList.contains('active') ? '✕' : '☰';
+        });
+        
+        // Close menu when a nav link is clicked (optional)
+        const navLinks = document.querySelectorAll('#main-nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    document.getElementById('main-nav').classList.remove('active');
+                    document.getElementById('mobile-menu').textContent = '☰';
+                }
+            });
+        });
+    </script>

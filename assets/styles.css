@@ -269,7 +269,6 @@ nav ul li a:hover {
 
 /* Grid Layout */
 .grid {
-    display: grid;
     gap: 2rem;
 }
 
