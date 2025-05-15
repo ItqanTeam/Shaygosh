@@ -548,6 +548,10 @@ footer {
     border-radius: 50%;
 }
 
+.rotate{
+    transform: rotate(45deg);
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
     .hero h2 {

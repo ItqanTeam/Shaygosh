@@ -34,7 +34,7 @@ title: Home
                 <p>Teaching Staff</p>
             </div>
             <div class="stat-item">
-                <h3>15</h3>
+                <h3>18</h3>
                 <p>Years of Service</p>
             </div>
         </div>
@@ -133,6 +133,26 @@ title: Home
                     <a href="/support/" class="btn btn-primary mt-2">Help Us</a>
                 </div>
             </div>
+            <div class="card">
+                <!-- Computers image from Unsplash -->
+                <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                    alt="Computers" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Improvement of Electrical System</h3>
+                    <p>Improvent of electrical system both internal and external.</p>
+                    <a href="/support/" class="btn btn-primary mt-2">Help Us</a>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Computers image from Unsplash -->
+                <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                    alt="Computers" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Overvall rehabiltation of school facilities</h3>
+                    <p>Overvall rehabiltation of school facilities including student dormetories, Admin Office, Studen clinic, multi-purporse hall, Fencings and others.</p>
+                    <a href="/support/" class="btn btn-primary mt-2">Help Us</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -150,9 +170,19 @@ title: Home
             <div class="swiper-slide image2"><img src="./assets/images/schoolGate.jpg" alt=""></div>
             <div class="swiper-slide image2"><img src="./assets/carouselImg/kow.jpg" alt=""></div>
             <div class="swiper-slide image2"><img src="./assets/carouselImg/laba.jpg" alt=""></div>
-            <div class="swiper-slide image2"><img src="./assets/carouselImg/laydh-2.jpg" alt=""></div>
-            <div class="swiper-slide image2"><img src="./assets/carouselImg/laydh-4.jpg" alt=""></div>
-            <div class="swiper-slide image2"><img src="./assets/carouselImg/laydh-3.jpg" alt=""></div>
+            <div class="swiper-slide image2"><img src="./assets/carouselImg/1.jpg" alt=""></div>
+            <div class="swiper-slide image2"><img src="./assets/carouselImg/2.jpg" alt=""></div>
+            <div class="swiper-slide image2"><img src="./assets/carouselImg/3.jpg" alt=""></div>
+            <div class="swiper-slide image2"><img src="./assets/carouselImg/5.jpg" alt=""></div>
+            <div class="swiper-slide image2"><img src="./assets/carouselImg/6.jpg" alt=""></div>
+            <div class="swiper-slide image2"><img src="./assets/carouselImg/7.jpg" alt=""></div>
+            <div class="swiper-slide image2"><img src="./assets/carouselImg/8.jpg" alt=""></div>
+            <div class="swiper-slide image2"><img src="./assets/carouselImg/9.jpg" alt=""></div>
+            <div class="swiper-slide image2"><img src="./assets/carouselImg/10.jpg" alt=""></div>
+            <div class="swiper-slide image2"><img src="./assets/carouselImg/musqul.jpg" alt=""></div>
+            <div class="swiper-slide image2"><img src="./assets/carouselImg/15.jpg" alt=""></div>
+            <div class="swiper-slide image2"><img src="./assets/carouselImg/16.jpg" alt=""></div>
+            <div class="swiper-slide image2"><img src="./assets/carouselImg/farxal.jpg" alt=""></div>
         </div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
@@ -169,46 +199,46 @@ title: Home
 </section>
 
 <script>
- document.addEventListener('DOMContentLoaded', function() {
-    // Get elements - using classes instead of IDs for better practice
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('nav');
-    const navLinks = document.querySelectorAll('nav a');
-    
-    // Toggle menu functionality
-    if (menuToggle) {
-        menuToggle.addEventListener('click', function() {
-            nav.classList.toggle('active');
-            
-            // Change the icon between ☰ and ✕
-            this.textContent = nav.classList.contains('active') ? '✕' : '☰';
-        });
-    }
-    
-    // Close menu when a nav link is clicked (optional)
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            if (window.innerWidth <= 768) {
-                nav.classList.remove('active');
-                if (menuToggle) {
-                    menuToggle.textContent = '☰';
-                }
-            }
-        });
-    });
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', function(event) {
-        if (window.innerWidth <= 768 && nav.classList.contains('active')) {
-            if (!event.target.closest('nav') && !event.target.closest('.menu-toggle')) {
-                nav.classList.remove('active');
-                if (menuToggle) {
-                    menuToggle.textContent = '☰';
-                }
-            }
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get elements - using classes instead of IDs for better practice
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+        const navLinks = document.querySelectorAll('nav a');
+
+        // Toggle menu functionality
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function () {
+                nav.classList.toggle('active');
+
+                // Change the icon between ☰ and ✕
+                this.textContent = nav.classList.contains('active') ? '✕' : '☰';
+            });
         }
+
+        // Close menu when a nav link is clicked (optional)
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                if (window.innerWidth <= 768) {
+                    nav.classList.remove('active');
+                    if (menuToggle) {
+                        menuToggle.textContent = '☰';
+                    }
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function (event) {
+            if (window.innerWidth <= 768 && nav.classList.contains('active')) {
+                if (!event.target.closest('nav') && !event.target.closest('.menu-toggle')) {
+                    nav.classList.remove('active');
+                    if (menuToggle) {
+                        menuToggle.textContent = '☰';
+                    }
+                }
+            }
+        });
     });
-});
 </script>
 
 <!-- Swiper JS (at the end of <body>) -->
