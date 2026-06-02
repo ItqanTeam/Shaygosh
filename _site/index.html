@@ -11,7 +11,20 @@
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 />
     
-  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: { preflight: false },
+      theme: {
+        extend: {
+          colors: {
+            brand: { green: '#1E5A3F', light: '#2E8B57', gold: '#ca8a04', cream: '#F9F9F9' }
+          }
+        }
+      }
+    }
+  </script>
+
 </head>
 <body>
    <header>
@@ -39,9 +52,9 @@
 
   <main>
     
-<!-- Hero image from Unsplash (education theme) -->
+<!-- Hero image - Shaykosh Boarding School Gate -->
 <section class="hero"
-    style="background-image: url('./assets/images/WhatsApp\ Image\ 2025-05-09\ at\ 14.23.59_96fd5b8d.jpg');">
+    style="background-image: url('./assets/images/school-gate-hero.jpg');">
     <div class="hero-content">
         <h2>Shaykosh Boarding School Empowering Pastoralist Children Through Quality Education</h2>
         <p>The first boarding institution established specifically for pastoralist children in the Somali Regional State
@@ -75,6 +88,310 @@
             </div>
         </div>
     </div>
+</section>
+
+<!-- ══════════ CURRENT STUDENTS 2026 ══════════ -->
+<section class="py-16 bg-white" id="students-2026">
+  <div class="container">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold mb-1" style="color:#1E5A3F;">Current Students 2026</h2>
+      <p class="text-lg italic" style="color:#ca8a04;">Ardayda Hadda — Sanadka 2026</p>
+      <div class="mx-auto mt-3 rounded" style="width:80px;height:4px;background:#ca8a04;"></div>
+    </div>
+
+    <!-- Summary Cards -->
+    <div class="grid gap-6 mb-10" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr));">
+      <div class="rounded-2xl text-center p-7 shadow-lg border-t-4" style="background:#f0fdf4;border-color:#1E5A3F;">
+        <div class="text-5xl font-extrabold mb-1" style="color:#1E5A3F;">425</div>
+        <div class="text-xs font-bold uppercase tracking-widest" style="color:#ca8a04;">Total Students</div>
+        <div class="text-xs mt-1 text-gray-400">Wadarta Ardayda</div>
+      </div>
+      <div class="rounded-2xl text-center p-7 shadow-lg border-t-4" style="background:#eff6ff;border-color:#1d4ed8;">
+        <div class="text-5xl font-extrabold mb-1" style="color:#1d4ed8;">370</div>
+        <div class="text-xs font-bold uppercase tracking-widest" style="color:#1d4ed8;">Boys — Wiilasha</div>
+        <div class="text-xs mt-1 text-gray-400">Ardayda Wiilasha</div>
+      </div>
+      <div class="rounded-2xl text-center p-7 shadow-lg border-t-4" style="background:#fdf2f8;border-color:#9d174d;">
+        <div class="text-5xl font-extrabold mb-1" style="color:#9d174d;">55</div>
+        <div class="text-xs font-bold uppercase tracking-widest" style="color:#9d174d;">Girls — Gabdhaha</div>
+        <div class="text-xs mt-1 text-gray-400">Ardayda Gabdhaha</div>
+      </div>
+    </div>
+
+    <!-- Data Tables -->
+    <div class="grid gap-8" style="grid-template-columns:repeat(auto-fit,minmax(270px,1fr));">
+
+      <!-- By Grade -->
+      <div class="rounded-2xl shadow-lg overflow-hidden">
+        <div class="px-5 py-4 text-white text-center" style="background:linear-gradient(135deg,#1E5A3F,#2E8B57);">
+          <h3 class="text-base font-bold tracking-wide">📚 By Grade — Fasalka</h3>
+        </div>
+        <table class="w-full text-sm">
+          <thead><tr style="background:#f0fdf4;">
+            <th class="py-2 px-4 text-left font-semibold" style="color:#1E5A3F;">Grade</th>
+            <th class="py-2 px-4 text-right font-semibold" style="color:#1E5A3F;">Students</th>
+          </tr></thead>
+          <tbody>
+            <tr class="border-b hover:bg-green-50"><td class="py-2 px-4">Grade 2</td><td class="py-2 px-4 text-right font-bold" style="color:#ca8a04;">81</td></tr>
+            <tr class="border-b hover:bg-green-50 bg-gray-50"><td class="py-2 px-4">Grade 3A</td><td class="py-2 px-4 text-right font-bold" style="color:#ca8a04;">56</td></tr>
+            <tr class="border-b hover:bg-green-50"><td class="py-2 px-4">Grade 3B</td><td class="py-2 px-4 text-right font-bold" style="color:#ca8a04;">46</td></tr>
+            <tr class="border-b hover:bg-green-50 bg-gray-50"><td class="py-2 px-4">Grade 4</td><td class="py-2 px-4 text-right font-bold" style="color:#ca8a04;">42</td></tr>
+            <tr class="border-b hover:bg-green-50"><td class="py-2 px-4">Grade 5</td><td class="py-2 px-4 text-right font-bold" style="color:#ca8a04;">14</td></tr>
+            <tr class="border-b hover:bg-green-50 bg-gray-50"><td class="py-2 px-4">Grade 6</td><td class="py-2 px-4 text-right font-bold" style="color:#ca8a04;">31</td></tr>
+            <tr class="border-b hover:bg-green-50"><td class="py-2 px-4">Grade 7</td><td class="py-2 px-4 text-right font-bold" style="color:#ca8a04;">39</td></tr>
+            <tr class="border-b hover:bg-green-50 bg-gray-50"><td class="py-2 px-4">Grade 8</td><td class="py-2 px-4 text-right font-bold" style="color:#ca8a04;">17</td></tr>
+            <tr class="border-b hover:bg-green-50"><td class="py-2 px-4">Grade 9</td><td class="py-2 px-4 text-right font-bold" style="color:#ca8a04;">29</td></tr>
+            <tr class="border-b hover:bg-green-50 bg-gray-50"><td class="py-2 px-4">Grade 10</td><td class="py-2 px-4 text-right font-bold" style="color:#ca8a04;">23</td></tr>
+            <tr class="border-b hover:bg-green-50"><td class="py-2 px-4">Grade 11</td><td class="py-2 px-4 text-right font-bold" style="color:#ca8a04;">21</td></tr>
+            <tr class="hover:bg-green-50 bg-gray-50"><td class="py-2 px-4">Grade 12</td><td class="py-2 px-4 text-right font-bold" style="color:#ca8a04;">26</td></tr>
+          </tbody>
+          <tfoot><tr style="background:#1E5A3F;color:white;">
+            <td class="py-2 px-4 font-bold">Total</td>
+            <td class="py-2 px-4 text-right font-bold">425</td>
+          </tr></tfoot>
+        </table>
+      </div>
+
+      <!-- By Region -->
+      <div class="rounded-2xl shadow-lg overflow-hidden">
+        <div class="px-5 py-4 text-white text-center" style="background:linear-gradient(135deg,#92400e,#ca8a04);">
+          <h3 class="text-base font-bold tracking-wide">🌍 By Region — Gobolka</h3>
+        </div>
+        <div class="p-5 space-y-4">
+          <div><div class="flex justify-between text-sm font-semibold mb-1"><span>Korahay</span><span style="color:#ca8a04;">184</span></div><div class="w-full bg-gray-100 rounded-full h-3"><div class="h-3 rounded-full" style="width:43%;background:linear-gradient(90deg,#1E5A3F,#2E8B57);"></div></div></div>
+          <div><div class="flex justify-between text-sm font-semibold mb-1"><span>Nogob</span><span style="color:#ca8a04;">83</span></div><div class="w-full bg-gray-100 rounded-full h-3"><div class="h-3 rounded-full" style="width:20%;background:linear-gradient(90deg,#1E5A3F,#2E8B57);"></div></div></div>
+          <div><div class="flex justify-between text-sm font-semibold mb-1"><span>Jarar</span><span style="color:#ca8a04;">56</span></div><div class="w-full bg-gray-100 rounded-full h-3"><div class="h-3 rounded-full" style="width:13%;background:linear-gradient(90deg,#1E5A3F,#2E8B57);"></div></div></div>
+          <div><div class="flex justify-between text-sm font-semibold mb-1"><span>Faafan</span><span style="color:#ca8a04;">39</span></div><div class="w-full bg-gray-100 rounded-full h-3"><div class="h-3 rounded-full" style="width:9%;background:linear-gradient(90deg,#1E5A3F,#2E8B57);"></div></div></div>
+          <div><div class="flex justify-between text-sm font-semibold mb-1"><span>Shabeele</span><span style="color:#ca8a04;">29</span></div><div class="w-full bg-gray-100 rounded-full h-3"><div class="h-3 rounded-full" style="width:7%;background:linear-gradient(90deg,#1E5A3F,#2E8B57);"></div></div></div>
+          <div><div class="flex justify-between text-sm font-semibold mb-1"><span>Doolo</span><span style="color:#ca8a04;">28</span></div><div class="w-full bg-gray-100 rounded-full h-3"><div class="h-3 rounded-full" style="width:7%;background:linear-gradient(90deg,#1E5A3F,#2E8B57);"></div></div></div>
+          <div><div class="flex justify-between text-sm font-semibold mb-1"><span>Erer</span><span style="color:#ca8a04;">6</span></div><div class="w-full bg-gray-100 rounded-full h-3"><div class="h-3 rounded-full" style="width:2%;background:linear-gradient(90deg,#1E5A3F,#2E8B57);"></div></div></div>
+        </div>
+      </div>
+
+      <!-- Age Distribution -->
+      <div class="rounded-2xl shadow-lg overflow-hidden">
+        <div class="px-5 py-4 text-white text-center" style="background:linear-gradient(135deg,#1E5A3F,#ca8a04);">
+          <h3 class="text-base font-bold tracking-wide">📅 Age Distribution — Umurada</h3>
+        </div>
+        <div class="p-5 grid grid-cols-2 gap-4">
+          <div class="rounded-xl p-4 text-center shadow-sm" style="background:#f0fdf4;"><div class="text-3xl font-extrabold" style="color:#1E5A3F;">78</div><div class="text-xs font-bold mt-1" style="color:#ca8a04;">9–12 yrs · 18%</div></div>
+          <div class="rounded-xl p-4 text-center shadow-sm" style="background:#fefce8;"><div class="text-3xl font-extrabold" style="color:#92400e;">197</div><div class="text-xs font-bold mt-1" style="color:#ca8a04;">13–15 yrs · 46%</div></div>
+          <div class="rounded-xl p-4 text-center shadow-sm" style="background:#f0fdf4;"><div class="text-3xl font-extrabold" style="color:#1E5A3F;">136</div><div class="text-xs font-bold mt-1" style="color:#ca8a04;">16–18 yrs · 32%</div></div>
+          <div class="rounded-xl p-4 text-center shadow-sm" style="background:#fdf2f8;"><div class="text-3xl font-extrabold" style="color:#9d174d;">14</div><div class="text-xs font-bold mt-1" style="color:#ca8a04;">19–21 yrs · 3%</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ STUDENT LIFE & CAMPUS GALLERY ══════════ -->
+<!-- ══════════ STUDENT LIFE & CAMPUS GALLERY ══════════ -->
+<section id="campus-life" style="background:linear-gradient(180deg,#f0fdf4 0%,#fff 100%);padding:5rem 0;">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <span class="inline-block px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-3" style="background:#dcfce7;color:#1E5A3F;">📸 Photo Gallery</span>
+      <h2 class="text-4xl font-extrabold mb-2" style="color:#1E5A3F;">Student Life &amp; Campus</h2>
+      <p class="text-lg italic mb-4" style="color:#ca8a04;">Nolosha Ardayda &amp; Xarumaha Dugsigu</p>
+      <div class="mx-auto rounded-full" style="width:90px;height:5px;background:linear-gradient(90deg,#1E5A3F,#ca8a04);"></div>
+      <p class="mt-4 text-gray-500 max-w-xl mx-auto text-sm">A window into daily life at Shaykosh — where faith, learning, and growth come together under the East African sky.</p>
+    </div>
+
+    <!-- Category: Students in Class -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-1 h-8 rounded-full" style="background:#1E5A3F;"></div>
+        <h3 class="text-xl font-bold" style="color:#1E5A3F;">📚 Students in the Classroom</h3>
+        <span class="text-xs px-3 py-1 rounded-full font-semibold" style="background:#dcfce7;color:#1E5A3F;">Fasalka</span>
+      </div>
+      <div class="grid gap-4" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr));">
+
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer" style="height:240px;">
+          <img src="/assets/newImages/img08.jpg" alt="Teacher with senior students" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-all duration-400" style="background:linear-gradient(to top,rgba(30,90,63,0.92) 0%,transparent 60%);">
+            <span class="text-white font-bold text-sm">Teacher-Student Session</span>
+            <span class="text-green-200 text-xs mt-0.5">Macalinka iyo Ardayda</span>
+          </div>
+        </div>
+
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer" style="height:240px;">
+          <img src="/assets/newImages/img10.jpg" alt="Senior students studying" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-all duration-400" style="background:linear-gradient(to top,rgba(30,90,63,0.92) 0%,transparent 60%);">
+            <span class="text-white font-bold text-sm">Senior Students — Grade 10–12</span>
+            <span class="text-green-200 text-xs mt-0.5">Ardayda Sare</span>
+          </div>
+        </div>
+
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer" style="height:240px;">
+          <img src="/assets/newImages/img11.jpg" alt="Students in class" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-all duration-400" style="background:linear-gradient(to top,rgba(30,90,63,0.92) 0%,transparent 60%);">
+            <span class="text-white font-bold text-sm">Classroom Learning</span>
+            <span class="text-green-200 text-xs mt-0.5">Barashada Fasalka</span>
+          </div>
+        </div>
+
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer" style="height:240px;">
+          <img src="/assets/newImages/img12.jpg" alt="Students studying" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-all duration-400" style="background:linear-gradient(to top,rgba(30,90,63,0.92) 0%,transparent 60%);">
+            <span class="text-white font-bold text-sm">Focused Study Time</span>
+            <span class="text-green-200 text-xs mt-0.5">Wakhtiga Barashada</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Category: Students Outdoors -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-1 h-8 rounded-full" style="background:#ca8a04;"></div>
+        <h3 class="text-xl font-bold" style="color:#1E5A3F;">🧑‍🤝‍🧑 Students Outdoors</h3>
+        <span class="text-xs px-3 py-1 rounded-full font-semibold" style="background:#fef9c3;color:#92400e;">Dibadda</span>
+      </div>
+      <div class="grid gap-4" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr));">
+
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer" style="height:240px;">
+          <img src="/assets/newImages/img05.jpg" alt="Students in uniform outdoors" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-all duration-400" style="background:linear-gradient(to top,rgba(146,64,14,0.90) 0%,transparent 60%);">
+            <span class="text-white font-bold text-sm">Students in Uniform</span>
+            <span class="text-yellow-200 text-xs mt-0.5">Ardayda Xiddigooda</span>
+          </div>
+        </div>
+
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer" style="height:240px;">
+          <img src="/assets/newImages/img06.jpg" alt="Students gathering" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-all duration-400" style="background:linear-gradient(to top,rgba(146,64,14,0.90) 0%,transparent 60%);">
+            <span class="text-white font-bold text-sm">Community Gathering</span>
+            <span class="text-yellow-200 text-xs mt-0.5">Shirka Ardayda</span>
+          </div>
+        </div>
+
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer" style="height:240px;">
+          <img src="/assets/newImages/img07.jpg" alt="Students outside" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-all duration-400" style="background:linear-gradient(to top,rgba(146,64,14,0.90) 0%,transparent 60%);">
+            <span class="text-white font-bold text-sm">After-Class Activities</span>
+            <span class="text-yellow-200 text-xs mt-0.5">Waxqabadka Fasalka Kadib</span>
+          </div>
+        </div>
+
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer" style="height:240px;">
+          <img src="/assets/newImages/img09.jpg" alt="Students on campus" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-all duration-400" style="background:linear-gradient(to top,rgba(146,64,14,0.90) 0%,transparent 60%);">
+            <span class="text-white font-bold text-sm">Campus Life Moments</span>
+            <span class="text-yellow-200 text-xs mt-0.5">Nolosha Xarunta</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Category: Campus Buildings -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-1 h-8 rounded-full" style="background:#1d4ed8;"></div>
+        <h3 class="text-xl font-bold" style="color:#1E5A3F;">🏫 Campus Buildings &amp; Facilities</h3>
+        <span class="text-xs px-3 py-1 rounded-full font-semibold" style="background:#dbeafe;color:#1d4ed8;">Xarumaha</span>
+      </div>
+      <div class="grid gap-4" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr));">
+
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer" style="height:240px;">
+          <img src="/assets/newImages/img01.jpg" alt="School building" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-all duration-400" style="background:linear-gradient(to top,rgba(29,78,216,0.88) 0%,transparent 60%);">
+            <span class="text-white font-bold text-sm">Renovated Classrooms</span>
+            <span class="text-blue-200 text-xs mt-0.5">Fasalada Cusbooneystiray</span>
+          </div>
+        </div>
+
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer" style="height:240px;">
+          <img src="/assets/newImages/img02.jpg" alt="School block" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-all duration-400" style="background:linear-gradient(to top,rgba(29,78,216,0.88) 0%,transparent 60%);">
+            <span class="text-white font-bold text-sm">School Block</span>
+            <span class="text-blue-200 text-xs mt-0.5">Qaybta Dugsigu</span>
+          </div>
+        </div>
+
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer" style="height:240px;">
+          <img src="/assets/newImages/img03.jpg" alt="Campus facilities" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-all duration-400" style="background:linear-gradient(to top,rgba(29,78,216,0.88) 0%,transparent 60%);">
+            <span class="text-white font-bold text-sm">Campus Infrastructure</span>
+            <span class="text-blue-200 text-xs mt-0.5">Kaabayaasha Xarunta</span>
+          </div>
+        </div>
+
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer" style="height:240px;">
+          <img src="/assets/newImages/img04.jpg" alt="School grounds" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-all duration-400" style="background:linear-gradient(to top,rgba(29,78,216,0.88) 0%,transparent 60%);">
+            <span class="text-white font-bold text-sm">School Grounds</span>
+            <span class="text-blue-200 text-xs mt-0.5">Dhulka Dugsigu</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Category: Gardens & Greenery -->
+    <div>
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-1 h-8 rounded-full" style="background:#16a34a;"></div>
+        <h3 class="text-xl font-bold" style="color:#1E5A3F;">🌿 Gardens, Greenery &amp; Cash Crops</h3>
+        <span class="text-xs px-3 py-1 rounded-full font-semibold" style="background:#dcfce7;color:#166534;">Beerta &amp; Cagaarka</span>
+      </div>
+      <div class="grid gap-4" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr));">
+
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer" style="height:240px;">
+          <img src="/assets/newImages/img25.jpg" alt="Watermelon crop" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-all duration-400" style="background:linear-gradient(to top,rgba(22,101,52,0.92) 0%,transparent 60%);">
+            <span class="text-white font-bold text-sm">🍉 Watermelon Harvest</span>
+            <span class="text-green-200 text-xs mt-0.5">Beerta Xarunta — Geedaha Midhaha</span>
+          </div>
+        </div>
+
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer" style="height:240px;">
+          <img src="/assets/newImages/img15.jpg" alt="Campus trees" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-all duration-400" style="background:linear-gradient(to top,rgba(22,101,52,0.92) 0%,transparent 60%);">
+            <span class="text-white font-bold text-sm">Lush Campus Greenery</span>
+            <span class="text-green-200 text-xs mt-0.5">Cagaarka Xarunta</span>
+          </div>
+        </div>
+
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer" style="height:240px;">
+          <img src="/assets/newImages/img20.jpg" alt="Trees and gardens" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-all duration-400" style="background:linear-gradient(to top,rgba(22,101,52,0.92) 0%,transparent 60%);">
+            <span class="text-white font-bold text-sm">Tree Plantation</span>
+            <span class="text-green-200 text-xs mt-0.5">Beerta Geedaha</span>
+          </div>
+        </div>
+
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer" style="height:240px;">
+          <img src="/assets/newImages/img22.jpg" alt="Solar light and trees" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-all duration-400" style="background:linear-gradient(to top,rgba(22,101,52,0.92) 0%,transparent 60%);">
+            <span class="text-white font-bold text-sm">Solar Lighting &amp; Green Spaces</span>
+            <span class="text-green-200 text-xs mt-0.5">Iftiinka Qorraxda &amp; Cagaarka</span>
+          </div>
+        </div>
+
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer" style="height:240px;">
+          <img src="/assets/newImages/img26.jpg" alt="Garden view" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-all duration-400" style="background:linear-gradient(to top,rgba(22,101,52,0.92) 0%,transparent 60%);">
+            <span class="text-white font-bold text-sm">School Garden View</span>
+            <span class="text-green-200 text-xs mt-0.5">Muuqaalka Beerta</span>
+          </div>
+        </div>
+
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer" style="height:240px;">
+          <img src="/assets/newImages/img28.jpg" alt="Green campus" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-all duration-400" style="background:linear-gradient(to top,rgba(22,101,52,0.92) 0%,transparent 60%);">
+            <span class="text-white font-bold text-sm">Beautification Project</span>
+            <span class="text-green-200 text-xs mt-0.5">Mashruuca Qurxinta</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <section class="section">

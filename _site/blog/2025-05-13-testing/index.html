@@ -13,7 +13,20 @@
     
     <link rel="stylesheet" href="/assets/blog-post.css">
   
-  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: { preflight: false },
+      theme: {
+        extend: {
+          colors: {
+            brand: { green: '#1E5A3F', light: '#2E8B57', gold: '#ca8a04', cream: '#F9F9F9' }
+          }
+        }
+      }
+    }
+  </script>
+
 </head>
 <body>
    <header>
